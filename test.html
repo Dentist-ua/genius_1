@@ -2,7 +2,67 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>$Title$</title>
+    <title>My Dictionary</title>
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const words = [
+          {
+            id: 1,
+            word: 'possessive',
+            transcription: '[pəˈzɛsɪv]',
+            translation: 'присвійний',
+            audio: './media/possessive.mp3',
+          },
+          {
+            id: 2,
+            word: 'abort',
+            transcription: '[əˈbôrt]',
+            translation: 'перервати',
+            audio: './media/abort.mp3',
+          },
+          {
+            id: 3,
+            word: 'abandon',
+            transcription: '[əˈbandən]',
+            translation: 'покинути',
+            audio: './media/abandon.mp3',
+          },
+          {
+            id: 4,
+            word: 'abnormal',
+            transcription: '[ˌabˈnôrməl]',
+            translation: 'аномальний',
+            audio: './media/abnormal.mp3',
+          },
+          {
+            id: 5,
+            word: 'abundant',
+            transcription: '[əˈbəndənt]',
+            translation: 'багатий, рясний',
+            audio: './media/abundant.mp3',
+          },
+          // Додайте інші слова тут
+        ];
+
+        const tbody = document.querySelector('tbody');
+        words.forEach(({ id, word, transcription, translation, audio }) => {
+          const row = `
+            <tr>
+              <td>${id}</td>
+              <td>${word}</td>
+              <td>${transcription}</td>
+              <td>${translation}</td>
+              <td>
+                <audio controls style="width: 350px; height: 20px">
+                  <source src="${audio}" type="audio/mpeg" />
+                </audio>
+              </td>
+            </tr>
+          `;
+          tbody.innerHTML += row;
+        });
+      });
+    </script>
   </head>
   <body>
     <video id="video" autoplay>
@@ -13,7 +73,6 @@
       <source src="./media/KK1.webm" type="video/webm" />
       Ваш браузер не підтримує відео тег.
     </video>
-
     <!-- TEST TABLE -->
     <table>
       <caption>
@@ -29,133 +88,10 @@
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <!-- 1 -->
-          <td>1</td>
-          <td>possessive</td>
-          <td>[pəˈzɛsɪv]</td>
-          <td>присвійний</td>
-          <td>
-            <audio controls style="width: 350px; height: 20px">
-              <source src="./media/possessive.mp3" type="audio/mpeg" />
-            </audio>
-          </td>
-        </tr>
-        <tr>
-          <!-- 2 -->
-          <td>2</td>
-          <td>6555555555555556</td>
-          <td>4455555555555555554</td>
-          <td>
-            <audio controls>
-              <source src="./media/possessive.mp3" type="audio/mpeg" />
-            </audio>
-          </td>
-        </tr>
-        <tr>
-          <!-- 3 -->
-          <td>3</td>
-          <td>77</td>
-          <td>555</td>
-          <td>
-            <audio controls>
-              <source src="./media/possessive.mp3" type="audio/mpeg" />
-            </audio>
-          </td>
-        </tr>
-        <tr>
-          <!-- 4 -->
-          <td>4</td>
-          <td>88</td>
-          <td>666</td>
-          <td>
-            <audio controls>
-              <source src="./media/possessive.mp3" type="audio/mpeg" />
-            </audio>
-          </td>
-        </tr>
-        <tr>
-          <!-- 5 -->
-          <td>5</td>
-          <td>88</td>
-          <td>666</td>
-          <td>
-            <audio controls>
-              <source src="./media/possessive.mp3" type="audio/mpeg" />
-            </audio>
-          </td>
-        </tr>
-        <tr>
-          <!-- 6 -->
-          <td>1</td>
-          <td>possessive</td>
-          <td>[pəˈzɛsɪv]</td>
-          <td>присвійний</td>
-          <td>
-            <audio controls style="width: 350px; height: 20px">
-              <source src="./media/possessive.mp3" type="audio/mpeg" />
-            </audio>
-          </td>
-        </tr>
-        <tr>
-          <!-- 7 -->
-          <td>2</td>
-          <td>6555555555555556</td>
-          <td>4455555555555555554</td>
-          <td>
-            <audio controls>
-              <source src="./media/possessive.mp3" type="audio/mpeg" />
-            </audio>
-          </td>
-        </tr>
-        <tr>
-          <!-- 8 -->
-          <td>3</td>
-          <td>77</td>
-          <td>555</td>
-          <td>
-            <audio controls>
-              <source src="./media/possessive.mp3" type="audio/mpeg" />
-            </audio>
-          </td>
-        </tr>
-        <tr>
-          <!-- 9 -->
-          <td>4</td>
-          <td>88</td>
-          <td>666</td>
-          <td>
-            <audio controls>
-              <source src="./media/possessive.mp3" type="audio/mpeg" />
-            </audio>
-          </td>
-        </tr>
-        <tr>
-          <!-- 10 -->
-          <td>10</td>
-          <!-- № -->
-          <td>abort</td>
-          <!-- Word -->
-          <td>[əˈbôrt]</td>
-          <!-- 	Transcription -->
-          <td>
-            <audio controls style="width: 350px; height: 20px">
-              <source src="./media/abort.mp3" type="audio/mpeg" />
-            </audio>
-          </td>
-        </tr>
+        <!-- Рядки будуть додані динамічно -->
       </tbody>
       <tfoot>
-        <tr>
-          <td>мільйон</td>
-          <td>два мільйон</td>
-          <td>три мільйон</td>
-          <td>
-            <audio controls>
-              <source src="./media/possessive.mp3" type="audio/mpeg" />
-            </audio>
-          </td>
-        </tr>
+        <!-- Table foot -->
       </tfoot>
     </table>
   </body>
