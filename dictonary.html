@@ -1,0 +1,699 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>My Dictionary</title>
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const words = [
+          {
+            id: 1,
+            word: 'Possessive',
+            transcription: '[pəˈzɛsɪv]',
+            translation: 'присвійний',
+            audio: '/media/possessive.mp3',
+          },
+          {
+            id: 2,
+            word: 'Match',
+            transcription: '[mætʃ]',
+            translation: 'відповідність',
+            audio: '/media/match.mp3',
+          },
+          {
+            id: 3,
+            word: 'Correct',
+            transcription: '[33]',
+            translation: '34',
+            audio: '/media/35',
+          },
+          {
+            id: 4,
+            word: 'over there',
+            transcription: '[43]',
+            translation: '44',
+            audio: '/media/45',
+          },
+          {
+            id: 5,
+            word: 'twin - близнюк',
+            transcription: '[53]',
+            translation: '54',
+            audio: '/media/55',
+          },
+          {
+            id: 6,
+            word: 'nephew',
+            transcription: '[63]',
+            translation: '64',
+            audio: '/media/65',
+          },
+          {
+            id: 7,
+            word: 'niece',
+            transcription: '[73]',
+            translation: '74',
+            audio: '/media/75',
+          },
+          {
+            id: 8,
+            word: 'plural',
+            transcription: '[83]',
+            translation: '84',
+            audio: '/media/85',
+          },
+          {
+            id: 9,
+            word: 'noun',
+            transcription: '[93]',
+            translation: '94',
+            audio: '/media/95',
+          },
+          {
+            id: 10,
+            word: 'abort',
+            transcription: '[[əˈbôrt]]',
+            translation: 'перервати',
+            audio: '/media/abort.mp3',
+          },
+          {
+            id: 11,
+            word: 'an avarage',
+            transcription: '[113]',
+            translation: '114',
+            audio: '/media/115',
+          },
+          {
+            id: 12,
+            word: 'compatible',
+            transcription: '[123]',
+            translation: '124',
+            audio: '/media/125',
+          },
+          {
+            id: 13,
+            word: 'crash',
+            transcription: '[133]',
+            translation: '134',
+            audio: '/media/135',
+          },
+          {
+            id: 14,
+            word: 'advised',
+            transcription: '[143]',
+            translation: '144',
+            audio: '/media/145',
+          },
+          {
+            id: 15,
+            word: 'which',
+            transcription: '[153]',
+            translation: '154',
+            audio: '/media/155',
+          },
+          {
+            id: 16,
+            word: 'inattention',
+            transcription: '[163]',
+            translation: '164',
+            audio: '/media/165',
+          },
+          {
+            id: 17,
+            word: 'supposed to do',
+            transcription: '[173]',
+            translation: '174',
+            audio: '/media/175',
+          },
+          {
+            id: 18,
+            word: 'spell-check',
+            transcription: '[183]',
+            translation: '184',
+            audio: '/media/185',
+          },
+          {
+            id: 19,
+            word: 'consisting',
+            transcription: '[193]',
+            translation: '194',
+            audio: '/media/195',
+          },
+          {
+            id: 20,
+            word: 'employee',
+            transcription: '[203]',
+            translation: '204',
+            audio: '/media/205',
+          },
+          {
+            id: 21,
+            word: 'employeer',
+            transcription: '[213]',
+            translation: '214',
+            audio: '/media/215',
+          },
+          {
+            id: 22,
+            word: 'Proprietary',
+            transcription: '[223]',
+            translation: '224',
+            audio: '/media/225',
+          },
+          {
+            id: 23,
+            word: 'Restriction',
+            transcription: '[]',
+            translation: '',
+            audio: '/media/',
+          },
+          {
+            id: 24,
+            word: 'Usanility',
+            transcription: '[]',
+            translation: '',
+            audio: '/media/',
+          },
+          {
+            id: 25,
+            word: ' ',
+            transcription: '[]',
+            translation: '',
+            audio: '/media/',
+          },
+          {
+            id: 26,
+            word: '',
+            transcription: '[]',
+            translation: '',
+            audio: '/media/',
+          },
+          {
+            id: 27,
+            word: '',
+            transcription: '[]',
+            translation: '',
+            audio: '/media/',
+          },
+          {
+            id: 28,
+            word: '',
+            transcription: '[]',
+            translation: '',
+            audio: '/media/',
+          },
+          {
+            id: 29,
+            word: '',
+            transcription: '[]',
+            translation: '',
+            audio: '/media/',
+          },
+          {
+            id: 30,
+            word: '',
+            transcription: '[]',
+            translation: '',
+            audio: '/media/',
+          },
+          {
+            id: 31,
+            word: '',
+            transcription: '[]',
+            translation: '',
+            audio: '/media/',
+          },
+          {
+            id: 32,
+            word: '',
+            transcription: '[]',
+            translation: '',
+            audio: '/media/',
+          },
+          {
+            id: 33,
+            word: '',
+            transcription: '[]',
+            translation: '',
+            audio: '/media/',
+          },
+          {
+            id: 34,
+            word: '',
+            transcription: '[]',
+            translation: '',
+            audio: '/media/',
+          },
+          {
+            id: 35,
+            word: '',
+            transcription: '[]',
+            translation: '',
+            audio: '/media/',
+          },
+          {
+            id: 36,
+            word: '',
+            transcription: '[]',
+            translation: '',
+            audio: '/media/',
+          },
+          {
+            id: 37,
+            word: '',
+            transcription: '[]',
+            translation: '',
+            audio: '/media/',
+          },
+          {
+            id: 38,
+            word: '',
+            transcription: '[]',
+            translation: '',
+            audio: '/media/',
+          },
+          {
+            id: 39,
+            word: '',
+            transcription: '[]',
+            translation: '',
+            audio: '/media/',
+          },
+          {
+            id: 40,
+            word: '',
+            transcription: '[]',
+            translation: '',
+            audio: '/media/',
+          },
+          {
+            id: 41,
+            word: '',
+            transcription: '[]',
+            translation: '',
+            audio: '/media/',
+          },
+          {
+            id: 42,
+            word: '',
+            transcription: '[]',
+            translation: '',
+            audio: '/media/',
+          },
+          {
+            id: 43,
+            word: '',
+            transcription: '[]',
+            translation: '',
+            audio: '/media/',
+          },
+          {
+            id: 44,
+            word: '',
+            transcription: '[]',
+            translation: '',
+            audio: '/media/',
+          },
+          {
+            id: 45,
+            word: '',
+            transcription: '[]',
+            translation: '',
+            audio: '/media/',
+          },
+          {
+            id: 46,
+            word: '',
+            transcription: '[]',
+            translation: '',
+            audio: '/media/',
+          },
+          {
+            id: 47,
+            word: '',
+            transcription: '[]',
+            translation: '',
+            audio: '/media/',
+          },
+          {
+            id: 48,
+            word: '',
+            transcription: '[]',
+            translation: '',
+            audio: '/media/',
+          },
+          {
+            id: 49,
+            word: '',
+            transcription: '[]',
+            translation: '',
+            audio: '/media/',
+          },
+          {
+            id: 50,
+            word: '',
+            transcription: '[]',
+            translation: '',
+            audio: '/media/',
+          },
+          {
+            id: 51,
+            word: '',
+            transcription: '[]',
+            translation: '',
+            audio: '/media/',
+          },
+          {
+            id: 52,
+            word: '',
+            transcription: '[]',
+            translation: '',
+            audio: '/media/',
+          },
+          {
+            id: 53,
+            word: '',
+            transcription: '[]',
+            translation: '',
+            audio: '/media/',
+          },
+          {
+            id: 54,
+            word: '',
+            transcription: '[]',
+            translation: '',
+            audio: '/media/',
+          },
+          {
+            id: 55,
+            word: '',
+            transcription: '[]',
+            translation: '',
+            audio: '/media/',
+          },
+          {
+            id: 56,
+            word: '',
+            transcription: '[]',
+            translation: '',
+            audio: '/media/',
+          },
+          {
+            id: 57,
+            word: '',
+            transcription: '[]',
+            translation: '',
+            audio: '/media/',
+          },
+          {
+            id: 58,
+            word: '',
+            transcription: '[]',
+            translation: '',
+            audio: '/media/',
+          },
+          {
+            id: 59,
+            word: '',
+            transcription: '[]',
+            translation: '',
+            audio: '/media/',
+          },
+          {
+            id: 60,
+            word: '',
+            transcription: '[]',
+            translation: '',
+            audio: '/media/',
+          },
+          {
+            id: 61,
+            word: '',
+            transcription: '[]',
+            translation: '',
+            audio: '/media/',
+          },
+          {
+            id: 62,
+            word: '',
+            transcription: '[]',
+            translation: '',
+            audio: '/media/',
+          },
+          {
+            id: 63,
+            word: '',
+            transcription: '[]',
+            translation: '',
+            audio: '/media/',
+          },
+          {
+            id: 64,
+            word: '',
+            transcription: '[]',
+            translation: '',
+            audio: '/media/',
+          },
+          {
+            id: 65,
+            word: '',
+            transcription: '[]',
+            translation: '',
+            audio: '/media/',
+          },
+          {
+            id: 66,
+            word: '',
+            transcription: '[]',
+            translation: '',
+            audio: '/media/',
+          },
+          {
+            id: 67,
+            word: '',
+            transcription: '[]',
+            translation: '',
+            audio: '/media/',
+          },
+          {
+            id: 68,
+            word: '',
+            transcription: '[]',
+            translation: '',
+            audio: '/media/',
+          },
+          {
+            id: 69,
+            word: '',
+            transcription: '[]',
+            translation: '',
+            audio: '/media/',
+          },
+          {
+            id: 70,
+            word: '',
+            transcription: '[]',
+            translation: '',
+            audio: '/media/',
+          },
+          {
+            id: 71,
+            word: '',
+            transcription: '[]',
+            translation: '',
+            audio: '/media/',
+          },
+          {
+            id: 72,
+            word: '',
+            transcription: '[]',
+            translation: '',
+            audio: '/media/',
+          },
+          {
+            id: 73,
+            word: '',
+            transcription: '[]',
+            translation: '',
+            audio: '/media/',
+          },
+          {
+            id: 74,
+            word: '',
+            transcription: '[]',
+            translation: '',
+            audio: '/media/',
+          },
+          {
+            id: 75,
+            word: '',
+            transcription: '[]',
+            translation: '',
+            audio: '/media/',
+          },
+          {
+            id: 76,
+            word: '',
+            transcription: '[]',
+            translation: '',
+            audio: '/media/',
+          },
+          {
+            id: 77,
+            word: '',
+            transcription: '[]',
+            translation: '',
+            audio: '/media/',
+          },
+          {
+            id: 78,
+            word: '',
+            transcription: '[]',
+            translation: '',
+            audio: '/media/',
+          },
+          {
+            id: 79,
+            word: '',
+            transcription: '[]',
+            translation: '',
+            audio: '/media/',
+          },
+          {
+            id: 80,
+            word: '',
+            transcription: '[]',
+            translation: '',
+            audio: '/media/',
+          },
+          {
+            id: 81,
+            word: '',
+            transcription: '[]',
+            translation: '',
+            audio: '/media/',
+          },
+          {
+            id: 82,
+            word: '',
+            transcription: '[]',
+            translation: '',
+            audio: '/media/',
+          },
+          {
+            id: 83,
+            word: '',
+            transcription: '[]',
+            translation: '',
+            audio: '/media/',
+          },
+          {
+            id: 84,
+            word: '',
+            transcription: '[]',
+            translation: '',
+            audio: '/media/',
+          },
+          {
+            id: 85,
+            word: '',
+            transcription: '[]',
+            translation: '',
+            audio: '/media/',
+          },
+          {
+            id: 86,
+            word: '',
+            transcription: '[]',
+            translation: '',
+            audio: '/media/',
+          },
+          {
+            id: 87,
+            word: '',
+            transcription: '[]',
+            translation: '',
+            audio: '/media/',
+          },
+          {
+            id: 88,
+            word: '',
+            transcription: '[]',
+            translation: '',
+            audio: '/media/',
+          },
+          {
+            id: 89,
+            word: '',
+            transcription: '[]',
+            translation: '',
+            audio: '/media/',
+          },
+          {
+            id: 90,
+            word: '',
+            transcription: '[]',
+            translation: '',
+            audio: '/media/',
+          },
+
+          // Додайте інші слова тут
+        ];
+
+        const tbody = document.querySelector('tbody');
+        words.forEach(({ id, word, transcription, translation, audio }) => {
+          const row = `
+            <tr>
+              <td>${id}</td>
+              <td>${word}</td>
+              <td>${transcription}</td>
+              <td>${translation}</td>
+              <td>
+                <audio controls style="width: 350px; height: 20px">
+                  <source src="${audio}" type="audio/mpeg" />
+                </audio>
+              </td>
+            </tr>
+          `;
+          tbody.innerHTML += row;
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <!--
+    <video id="video" autoplay>
+      <source
+        src="./media/noob in it.webm"
+        type="video/mp4"
+      />
+    </video> 
+  -->
+    <video controls width="600">
+      <source src="./media/noob in IT.webm" type="video/mp4" />
+      <source src="./media/noob in IT.webm" type="video/webm" />
+      Ваш браузер не підтримує відео тег.
+    </video>
+    <!-- TEST TABLE -->
+    <table>
+      <caption>
+        My DICTIONARY &copy;
+      </caption>
+      <thead>
+        <tr>
+          <th>№</th>
+          <th>Word</th>
+          <th>Transcription</th>
+          <th>Translation</th>
+          <th>Audio</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Рядки будуть додані динамічно -->
+      </tbody>
+      <tfoot>
+        <!-- Table foot -->
+      </tfoot>
+    </table>
+  </body>
+</html>
