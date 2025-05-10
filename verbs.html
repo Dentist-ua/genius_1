@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>irregular verbs</title>
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const words = [
+          {
+            id: 1,
+            infinitive: 'be [biː]',
+            audio1: './media/verb/1_be.mp3',
+            past_simple: 'was [wɒz] / were [wɜː(r)]',
+            audio2: './media/verb/1_was,were.mp3',
+            past_participle: 'been [biːn]',
+            audio3: './media/verb/1_been.mp3',
+            translation: 'бути, був/були, були,',
+          },
+          {
+            id: 2,
+            infinitive: 'become [bɪˈkʌm]',
+            audio1: './media/verb/2_become.mp3',
+            past_simple: 'became [bɪˈkeɪm]',
+            audio2: './media/verb/2_became.mp3',
+            past_participle: 'become [bɪˈkʌm]  ',
+            audio3: './media/verb/2_become.mp3',
+            translation: 'стати, став, стати',
+          },
+          {
+            id: 3,
+            infinitive: 'begin [bɪˈɡɪn]',
+            audio1: './media/verb/3_begin.mp3',
+            past_simple: '2[began [bɪˈɡæn]',
+            audio2: './media/verb/3_began.mp3',
+            past_participle: '2[begun [bɪˈɡʌn]',
+            audio3: './media/verb/3_begun.mp3',
+            translation: 'почати, почав, почав',
+          },
+
+          // Додайте інші слова тут
+        ];
+
+        const tbody = document.querySelector('tbody');
+        words.forEach(
+          ({
+            id,
+            infinitive,
+            audio1,
+            past_simple,
+            audio2,
+            past_participle,
+            audio3,
+            translation,
+          }) => {
+            const row = `
+            <tr>
+            <td>${id}</td>
+            <td>${infinitive}</td>
+            <td>
+                <audio controls style="width: 270px; height: 18px">
+                <source src="${audio1}" type="audio/mpeg"/>
+                  Ваш браузер не підтримує аудіо тег.
+               </audio>
+            </td>
+              <td>${past_simple}</td>
+              <td>
+                <audio controls style="width: 270px; height: 18px">
+                <source src="${audio2}" type="audio/mpeg"/>
+                  Ваш браузер не підтримує аудіо тег.
+               </audio>
+              </td>
+              <td>${past_participle}</td>
+              <td>
+                <audio controls style="width: 270px; height: 18px">
+                <source src="${audio3}" type="audio/mpeg"/>
+                  Ваш браузер не підтримує аудіо тег.
+               </audio>
+              </td>
+              <td>${translation}</td>
+            </tr>
+          `;
+            tbody.innerHTML += row;
+          },
+        );
+      });
+    </script>
+  </head>
+  <body>
+    <!-- TEST TABLE -->
+    <table>
+      <caption>
+        Irregular verbs &copy;
+      </caption>
+      <thead>
+        <tr>
+          <th>№</th>
+          <th>infinitive</th>
+          <th>audio1</th>
+          <th>Past simple</th>
+          <th>audio2</th>
+          <th>Past participle</th>
+          <th>audio3</th>
+          <th>Translation</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Рядки будуть додані динамічно -->
+      </tbody>
+      <tfoot>
+        <!-- Table foot -->
+      </tfoot>
+    </table>
+  </body>
+</html>
